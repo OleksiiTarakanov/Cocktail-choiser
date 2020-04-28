@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "makeCocktail"
+    }
+  },
+  "defaultProject": "makeCocktail",
+  "cli": {
+    "analytics": false
+  }
 }
