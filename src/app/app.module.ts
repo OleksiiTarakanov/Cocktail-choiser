@@ -7,8 +7,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { MainComponent } from './component/main/main.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { AlcoCocktailsComponent } from './app/component/main/alco-cocktails/alco-cocktails.component';
-import { NoneAlcoholComponent } from './component/main/none-alcohol/none-alcohol.component';
+
 
 
 
@@ -18,8 +17,6 @@ import { NoneAlcoholComponent } from './component/main/none-alcohol/none-alcohol
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    AlcoCocktailsComponent,
-    NoneAlcoholComponent,
   ],
   imports: [
     BrowserModule,
