@@ -6,6 +6,11 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MainComponent } from './component/main/main.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AlcoCocktailsComponent } from './app/component/main/alco-cocktails/alco-cocktails.component';
+import { NoneAlcoholComponent } from './component/main/none-alcohol/none-alcohol.component';
+
+
 
 @NgModule({
   declarations: [
@@ -13,9 +18,12 @@ import { MainComponent } from './component/main/main.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
+    AlcoCocktailsComponent,
+    NoneAlcoholComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

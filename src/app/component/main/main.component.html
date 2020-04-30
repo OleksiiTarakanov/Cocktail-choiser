@@ -1,3 +1,10 @@
-<div class="content text-center">
-    <h2>Main content</h2>
+<div class="content response">
+  <div class="card cocktail" style="width: 15rem;" *ngFor="let cocktail of cocktailList">
+    <img src={{cocktail.strDrinkThumb}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{cocktail.strDrink}}</h5>
+      <p class="card-text">To read a way to make cocktail, please press 'More'</p>
+      <a routerlink="cocktail.idDrink" class="btn btn-primary">More</a>
+    </div>
+  </div>
 </div>
