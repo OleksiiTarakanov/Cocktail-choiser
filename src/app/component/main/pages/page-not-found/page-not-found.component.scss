@@ -1,0 +1,18 @@
+.content {
+  height: calc(100vh - 226px);
+  padding: 10px;
+  background-image: url(https://cdn.hipwallpaper.com/i/24/31/hTEWL8.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found{
+    font-size: 150px;
+    color: #333333;
+}
+
+.text-not-found{
+    font-size: 75px;
+    color: #333333;
+}
