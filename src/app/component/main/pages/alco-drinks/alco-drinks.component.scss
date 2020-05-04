@@ -13,4 +13,15 @@
 
 .cocktail {
   margin: 10px 0;
+  max-height: 450px;
+}
+
+.search{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #343a40;
+
+  .area-search{
+    margin-bottom: 3px;
+  }
 }

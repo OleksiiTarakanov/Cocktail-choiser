@@ -7,12 +7,14 @@ import { FooterComponent } from './component/footer/footer.component';
 import { MainComponent } from './component/main/main.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AboutComponent } from './component/main/pages/about/about.component';
 import { PageNotFoundComponent } from './component/main/pages/page-not-found/page-not-found.component';
 import { AlcoDrinksComponent } from './component/main/pages/alco-drinks/alco-drinks.component';
 import { NoneAlcoDrinksComponent } from './component/main/pages/none-alco-drinks/none-alco-drinks.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FilterBySearchPipe } from './shared/pipes/filter-by-seach/filter-by-search.pipe';
 
 
 
@@ -27,11 +29,13 @@ import { AppRoutingModule } from './app-routing.module';
     AboutComponent,
     AlcoDrinksComponent,
     NoneAlcoDrinksComponent,
+    FilterBySearchPipe,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

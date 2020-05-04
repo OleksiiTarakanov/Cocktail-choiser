@@ -9,9 +9,11 @@ import { Cocktail } from 'src/app/core/interfaces/cocktail-interface/cocktail.in
 })
 
 export class AlcoDrinksComponent implements OnInit {
+
   cocktailList: Array<Cocktail>
   cocktail: Cocktail
   idDrink: number
+  public search: string;
 
   constructor(private ingredientsService: IngredientsService) { }
 
@@ -24,7 +26,6 @@ export class AlcoDrinksComponent implements OnInit {
       .subscribe(data => {
         this.cocktailList = data.drinks;
         console.log(data);
-        
       });
     console.log(123)
   }

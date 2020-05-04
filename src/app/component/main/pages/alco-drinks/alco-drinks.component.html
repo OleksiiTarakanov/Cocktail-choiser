@@ -1,5 +1,14 @@
+<form class="form-inline my-2 my-lg-0 search">
+  <input class="form-control mr-sm-2 area-search" 
+         type="search" 
+         placeholder="Search" 
+         aria-label="Search"
+         name="search"
+         [(ngModel)]="search">
+</form>
+
 <div class="content response">
-  <div class="card cocktail" style="width: 15rem;" *ngFor="let cocktail of cocktailList">
+  <div class="card cocktail" style="width: 15rem;" *ngFor="let cocktail of cocktailList | filterBySearch: search">
     <img src={{cocktail.strDrinkThumb}} class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{cocktail.strDrink}}</h5>

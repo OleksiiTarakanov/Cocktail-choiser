@@ -12,6 +12,7 @@ export class NoneAlcoDrinksComponent implements OnInit {
   cocktailList: Array<Cocktail>
   cocktail: Cocktail
   idDrink: number
+  public search: string;
 
   constructor(private ingredientsService: NonAlcoDrinksService) { }
 
