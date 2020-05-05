@@ -29,11 +29,4 @@ export class NoneAlcoDrinksComponent implements OnInit {
       });
     console.log(123)
   }
-
-  private getCocktail(idDrink: number): void {
-    this.ingredientsService.getCocktailData(idDrink)
-      .subscribe((data) => {
-        this.cocktail = data;
-      })
-  }
 }

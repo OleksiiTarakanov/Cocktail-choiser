@@ -8,17 +8,17 @@ import { Cocktail, CocktailObject } from '../interfaces/cocktail-interface';
 })
 export class NonAlcoDrinksService {
 
-  private url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`
+  private url = `https://www.thecocktaildb.com/api/json/v1/1/`
 
   constructor(
     private http: HttpClient
   ) { }
 
   getCocktailsData(): Observable<CocktailObject> {
-    return this.http.get<CocktailObject>(this.url);
+    return this.http.get<CocktailObject>(this.url+'filter.php?a=Non_Alcoholic');
   }
 
-  getCocktailData(idDrink: number): Observable<Cocktail>{
-    return this.http.get<Cocktail>(`${this.url}/${idDrink}`);
+  getCocktailData(idDrink: number): Observable<CocktailObject>{
+    return this.http.get<CocktailObject>(`${this.url}/lookup.php?i=${idDrink}`);
   }
 }

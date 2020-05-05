@@ -11,6 +11,7 @@ import { Cocktail } from 'src/app/core/interfaces/cocktail-interface/cocktail.in
   styleUrls: ['./alco-drink.component.scss']
 })
 export class AlcoDrinkComponent implements OnInit {
+  cocktailList: Array<Cocktail>
   cocktail: Cocktail
   idDrink: number
 
@@ -19,15 +20,15 @@ export class AlcoDrinkComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     ) { }
 
-  ngOnInit(): void {
-    this.getCocktailId()
+  async ngOnInit(): Promise<void> {
+   const res =  await this.getCocktailId()
   }
 
-  private getCocktailId(): void {
-    this.activatedRoute.params
+  private async getCocktailId(): Promise<void> {
+    const res = await this.activatedRoute.params
       .subscribe(
         params => {
-          this.getCocktail(params.idDrink)
+          this.getCocktail(params.idDrink);
           console.log(params.idDrink);
         });
   }
@@ -35,9 +36,10 @@ export class AlcoDrinkComponent implements OnInit {
   private getCocktail(idDrink: number): void {
     this.ingredientsService.getCocktailData(idDrink)
       .subscribe((data) => {
-        this.cocktail = data;
-        console.log(data);
+        console.log(data.drinks[0]);
+        this.cocktail = data.drinks[0];
       })
   }
+
 
 }

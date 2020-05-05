@@ -21,19 +21,18 @@ export class AlcoDrinksComponent implements OnInit {
     this.getCocktails();
   }
 
-  private getCocktails(): void {
+  getCocktails(): void {
     this.ingredientsService.getCocktailsData()
       .subscribe(data => {
         this.cocktailList = data.drinks;
         console.log(data);
-      });
-    console.log(123)
+      })
   }
 
-  private getCocktail(idDrink: number): void {
+  getCocktail(idDrink: number): void {
     this.ingredientsService.getCocktailData(idDrink)
-      .subscribe((data) => {
-        this.cocktail = data;
+      .subscribe(() => {
+        this.getCocktails();
       })
   }
 

@@ -1,9 +1,38 @@
 <div class="content response">
-  <div class="card cocktail" style="width: 15rem;">
-    <img src="cocktail.strDrinkThumb" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{cocktail.strDrink}}</h5>
-      <p class="card-text">To read a way to make cocktail, please press 'More'</p>
+    <div class="card cocktail">
+      <img src={{cocktail?.strDrinkThumb}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>Title: </b><br>{{cocktail?.strDrink}}</h5>
+  
+        <p class="card-text">
+          <b>Type: </b><br>
+          {{cocktail?.strAlcoholic}}
+        </p>
+  
+        <p class="card-text">
+          <b>Category: </b><br>
+          {{cocktail?.strCategory}}
+        </p>
+  
+        <p class="card-text">
+          <b>Glass: </b><br>
+          {{cocktail?.strGlass}}
+        </p>
+  
+        <p class="card-text">
+          <b>How to make: </b> <br> {{cocktail?.strInstructions}}
+        </p>
+        
+        <p class="card-text"><b>Ingridients: </b> <br>
+          {{cocktail?.strIngredient1}} {{cocktail?.strMeasure1}} <br>
+          {{cocktail?.strIngredient2}} {{cocktail?.strMeasure2}} <br>
+          {{cocktail?.strIngredient3}} {{cocktail?.strMeasure3}} <br>
+          {{cocktail?.strIngredient4}} {{cocktail?.strMeasure4}} <br>
+          {{cocktail?.strIngredient5}} {{cocktail?.strMeasure5}} <br>
+          {{cocktail?.strIngredient6}} {{cocktail?.strMeasure6}} <br>
+          {{cocktail?.strIngredient7}} {{cocktail?.strMeasure7}} <br>
+          {{cocktail?.strIngredient8}} {{cocktail?.strMeasure8}}
+        </p>
+      </div>
     </div>
   </div>
-</div>

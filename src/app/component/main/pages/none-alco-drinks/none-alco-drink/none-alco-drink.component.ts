@@ -35,8 +35,8 @@ export class NoneAlcoDrinkComponent implements OnInit {
   private getCocktail(idDrink: number): void {
     this.ingredientsService.getCocktailData(idDrink)
       .subscribe((data) => {
-        this.cocktail = data;
-        console.log(data);
+        this.cocktail = data.drinks[0];
+        console.log(data.drinks[0]);
       })
   }
 

@@ -1,27 +1,29 @@
 .content {
-    height: calc(100vh - 226px);
-  }
-  
-  .response {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    width: 100%;
-    overflow-y: scroll;
-    background-image: url(https://s2.best-wallpaper.net/wallpaper/1920x1080/1807/Summer-smoothies-fruit-drinks-glass-cups_1920x1080.jpg);
-  }
-  
-  .cocktail {
-    margin: 10px 0;
-    max-height: 450px;
-  }
-  
-  .search{
-    display: flex;
-    justify-content: flex-end;
-    background-color: #343a40;
-    
-    .area-search{
-      margin-bottom: 3px;
-    }
-  }
+  height: calc(100vh - 226px);
+}
+
+.response {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  width: 100%;
+  overflow-y: scroll;
+  background-image: url(https://s2.best-wallpaper.net/wallpaper/1920x1080/1807/Summer-smoothies-fruit-drinks-glass-cups_1920x1080.jpg);
+}
+
+.cocktail {
+  width: 80%;
+  margin: 10px 0;
+  min-height: 400px;
+  display: flex;
+  flex-direction: row;
+  background-image: url(Summer-smoothies-fruit-drinks-glass-cups_1920x1080[1].png);
+  background-position-y: -250px;
+  background-position-x: -450px;
+}
+
+.card-img-top {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+}
