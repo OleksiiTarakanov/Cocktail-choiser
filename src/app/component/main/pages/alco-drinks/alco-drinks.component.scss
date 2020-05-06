@@ -14,18 +14,48 @@
 .cocktail {
   margin: 10px 0;
   max-height: 450px;
+  width: 15rem;
 }
 
-.search{
+.search {
   display: flex;
   justify-content: flex-end;
   background-color: #343a40;
 
-  .area-search{
+  .area-search {
     margin-bottom: 3px;
   }
 }
 
-.no-response{
+.no-response {
   color: whitesmoke;
+}
+
+
+@media screen and (max-width:1920px) {
+  .cocktail {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .area-search {
+    width: 100%;
+  }
+
+  .search {
+    background-color: #343a40;
+  }
+}
+
+@media screen and (max-width:411px) {
+  .card-text{
+    display: none;
+  }
+  .btn{
+    width: 100%;
+  }
+  .cocktail {
+    width: 45%;
+  }
 }

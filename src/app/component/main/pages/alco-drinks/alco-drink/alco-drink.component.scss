@@ -18,9 +18,8 @@
   display: flex;
   flex-direction: row;
   background-image: url(alcohol-vodka-bottles-assorted-wallpaper.jpg);
-  // background-position-y: -750px;
   background-position-x: -450px;
-  color:wheat;
+  color: wheat;
   filter: contrast(1.1)
 }
 
@@ -28,4 +27,40 @@
   width: 400px;
   height: 400px;
   margin: 15px;
+}
+
+@media screen and (max-width:1920px) {
+  .cocktail {
+    width: 60%;
+    min-height: 500px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .cocktail {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width:411px) {
+  .cocktail {
+    flex-direction: column;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+
+    .card-img-top {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width:625px) {
+  .cocktail {
+    flex-direction: column;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+  }
 }

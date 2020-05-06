@@ -5,3 +5,29 @@
   background-size: 120%;
   text-align: justify;
 }
+
+@media screen and (max-width:1024px) {
+  .content {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .content {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width:411px) {
+  .content {
+    background-size: cover;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width:625px) {
+  .content {
+    background-size: cover;
+    overflow: scroll;
+  }
+}
