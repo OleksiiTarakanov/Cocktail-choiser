@@ -10,15 +10,19 @@ import { Cocktail } from 'src/app/core/interfaces/cocktail-interface/cocktail.in
 
 export class AlcoDrinksComponent implements OnInit {
 
-  cocktailList: Array<Cocktail>
-  cocktail: Cocktail
-  idDrink: number
+  cocktailList: Array<Cocktail>;
+  cocktail: Cocktail;
+  idDrink: number;
+  countCocktail: number = 10;
+
+
   public search: string;
+
 
   constructor(private ingredientsService: IngredientsService) { }
 
   ngOnInit(): void {
-    this.getCocktails();
+    this.getCocktailPage();
   }
 
   getCocktails(): void {
@@ -29,11 +33,26 @@ export class AlcoDrinksComponent implements OnInit {
       })
   }
 
-  getCocktail(idDrink: number): void {
-    this.ingredientsService.getCocktailData(idDrink)
-      .subscribe(() => {
-        this.getCocktails();
+  // getCocktail(idDrink: number): void {
+  //   this.ingredientsService.getCocktailData(idDrink)
+  //     .subscribe(() => {
+  //       this.getCocktails();
+  //     })
+  // }
+
+  getCocktailPage(): void {
+    this.ingredientsService.getCocktailsData()
+      .subscribe(data => {
+
+        this.cocktailList = data.drinks;
+        this.cocktailList.length = this.countCocktail;
+        this.countCocktail += 10;
+
+        console.log(this.countCocktail);
+
+        if (this.countCocktail >= 100) {
+          this.countCocktail = 100
+        }
       })
   }
-
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { Location } from '@angular/common';
+
 import { Cocktail } from 'src/app/core/interfaces/cocktail-interface/cocktail.interface';
 import { NonAlcoDrinksService } from 'src/app/core/services/non-alco-drinks.service';
 
@@ -17,6 +19,7 @@ export class NoneAlcoDrinkComponent implements OnInit {
   constructor(
     private ingredientsService: NonAlcoDrinksService,
     private activatedRoute: ActivatedRoute,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -38,6 +41,10 @@ export class NoneAlcoDrinkComponent implements OnInit {
         this.cocktail = data.drinks[0];
         console.log(data.drinks[0]);
       })
+  }
+
+  backClicked() {
+    this.location.back();
   }
 
 }

@@ -9,18 +9,20 @@ import { NonAlcoDrinksService } from 'src/app/core/services/non-alco-drinks.serv
 })
 export class NoneAlcoDrinksComponent implements OnInit {
   
-  cocktailList: Array<Cocktail>
-  cocktail: Cocktail
-  idDrink: number
+  cocktailList: Array<Cocktail>;
+  cocktail: Cocktail;
+  idDrink: number;
+  countCocktail: number = 10;
+
   public search: string;
 
   constructor(private ingredientsService: NonAlcoDrinksService) { }
 
   ngOnInit(): void {
-    this.getCocktails();
+    this.getCocktailPage();
   }
 
-  private getCocktails(): void {
+  getCocktails(): void {
     this.ingredientsService.getCocktailsData()
       .subscribe(data => {
         this.cocktailList = data.drinks;
@@ -28,5 +30,21 @@ export class NoneAlcoDrinksComponent implements OnInit {
         
       });
     console.log(123)
+  }
+
+  getCocktailPage(): void {
+    this.ingredientsService.getCocktailsData()
+      .subscribe(data => {
+
+        this.cocktailList = data.drinks;
+        this.cocktailList.length = this.countCocktail;
+        this.countCocktail += 10;
+
+        console.log(this.countCocktail);
+
+        if (this.countCocktail >= 58) {
+          this.countCocktail = 58
+        }
+      })
   }
 }

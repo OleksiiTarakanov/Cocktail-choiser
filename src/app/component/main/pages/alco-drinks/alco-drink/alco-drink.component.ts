@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+
 import { ActivatedRoute } from '@angular/router';
 
 import { IngredientsService } from 'src/app/core/services/ingredients.service';
@@ -14,14 +16,16 @@ export class AlcoDrinkComponent implements OnInit {
   cocktailList: Array<Cocktail>
   cocktail: Cocktail
   idDrink: number
+  countCocktail: number = 10
 
   constructor(
     private ingredientsService: IngredientsService,
     private activatedRoute: ActivatedRoute,
-    ) { }
+    private location: Location
+  ) { }
 
-  async ngOnInit(): Promise<void> {
-   const res =  await this.getCocktailId()
+  ngOnInit(): void {
+    this.getCocktailId()
   }
 
   private async getCocktailId(): Promise<void> {
@@ -41,5 +45,8 @@ export class AlcoDrinkComponent implements OnInit {
       })
   }
 
+  backClicked() {
+    this.location.back();
+  }
 
 }

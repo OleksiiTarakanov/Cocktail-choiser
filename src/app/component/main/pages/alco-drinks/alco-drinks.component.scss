@@ -17,6 +17,12 @@
   width: 15rem;
 }
 
+button {
+  width: 200px;
+  height: 40px;
+  margin: 10px;
+}
+
 .search {
   display: flex;
   justify-content: flex-end;
@@ -49,12 +55,14 @@
 }
 
 @media screen and (max-width:411px) {
-  .card-text{
+  .card-text {
     display: none;
   }
-  .btn{
+
+  .btn {
     width: 100%;
   }
+
   .cocktail {
     width: 45%;
   }

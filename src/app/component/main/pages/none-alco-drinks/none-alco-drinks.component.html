@@ -1,20 +1,21 @@
 <form class="form-inline my-2 my-lg-0 search">
-  <input class="form-control mr-sm-2 area-search" 
-         type="search" 
-         placeholder="Search" 
-         aria-label="Search"
-         name="search"
-         [(ngModel)]="search">
+  <input class="form-control mr-sm-2 area-search" type="search" placeholder="Search" aria-label="Search" name="search"
+    [(ngModel)]="search">
 </form>
 
 <div class="content response">
-    <span class="no-response" *ngIf="!cocktailList">No Data</span>
-    <div class="card cocktail" *ngFor="let cocktail of cocktailList | filterBySearch: search">
-      <img src={{cocktail.strDrinkThumb}} class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{cocktail.strDrink}}</h5>
-        <p class="card-text">To read a way to make cocktail, please press 'More'</p>
-        <a class="btn btn-primary" routerLink={{cocktail.idDrink}}>More</a>
-      </div>
+  <span class="no-response" *ngIf="!cocktailList">No Data</span>
+  <div class="card cocktail" *ngFor="let cocktail of cocktailList | filterBySearch: search">
+    <img src={{cocktail.strDrinkThumb}} class="card-img-top" alt="..." routerLink={{cocktail.idDrink}}>
+    <div class="card-body">
+      <h5 class="card-title">{{cocktail.strDrink}}</h5>
+      <p class="card-text">To read a way to make cocktail, please press 'More'</p>
+      <a class="btn btn-primary" routerLink={{cocktail.idDrink}}>More</a>
     </div>
   </div>
+  <div class="buttons">
+    <button class="btn btn-primary" (click)="getCocktailPage()" [disabled]="cocktailList?.length == 58">Show More
+      Cocktails</button>
+    <button class="btn btn-primary" (click)="getCocktails()">Show All</button>
+  </div>
+</div>
