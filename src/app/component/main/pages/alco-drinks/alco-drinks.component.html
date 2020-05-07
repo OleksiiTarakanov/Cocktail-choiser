@@ -5,15 +5,18 @@
 
 <div class="content response">
   <span class="no-response" *ngIf="!cocktailList">No Data</span>
-  <div class="card cocktail" *ngFor="let cocktail of cocktailList | filterBySearch: search">
-    <img src={{cocktail?.strDrinkThumb}} class="card-img-top" alt="..." routerLink={{cocktail?.idDrink}}>
-    <div class="card-body">
-      <h5 class="card-title">{{cocktail?.strDrink}}</h5>
-      <p class="card-text">To read a way to make cocktail, please press 'More'</p>
-      <a class="btn btn-primary" routerLink={{cocktail?.idDrink}}>More</a>
+  <div class="row">
+    <div class="card cocktail" *ngFor="let cocktail of cocktailList | filterBySearch: search">
+      <img src={{cocktail?.strDrinkThumb}} class="card-img-top" alt="..." routerLink={{cocktail?.idDrink}}>
+      <div class="card-body">
+        <h5 class="card-title">{{cocktail?.strDrink}}</h5>
+        <p class="card-text">To read a way to make cocktail, please press 'More'</p>
+        <a class="btn btn-primary" routerLink={{cocktail?.idDrink}}>More</a>
+      </div>
     </div>
   </div>
-  <div class="buttons">
+
+  <div class="buttons" *ngIf="cocktailList?.length != 100">
     <button class="btn btn-primary" (click)="getCocktailPage()" [disabled]="cocktailList?.length == 100">Show More
       Cocktails</button>
     <button class="btn btn-primary" (click)="getCocktails()">Show All</button>

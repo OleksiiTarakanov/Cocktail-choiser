@@ -11,6 +11,12 @@
   background-image: url(https://www.wallpaperflare.com/static/318/502/551/alcohol-vodka-bottles-assorted-wallpaper.jpg);
 }
 
+.row{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
 .cocktail {
   margin: 10px 0;
   max-height: 450px;

@@ -12,6 +12,12 @@
   background-image: url(https://s2.best-wallpaper.net/wallpaper/1920x1080/1807/Summer-smoothies-fruit-drinks-glass-cups_1920x1080.jpg);
 }
 
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
 .cocktail {
   margin: 10px 0;
   max-height: 450px;
@@ -25,39 +31,41 @@ button {
 }
 
 
-.search{
+.search {
   display: flex;
   justify-content: flex-end;
   background-color: #343a40;
-  
-  .area-search{
+
+  .area-search {
     margin-bottom: 3px;
   }
 }
 
-@media screen and (max-width:1920px){
-  .cocktail{
+@media screen and (max-width:1920px) {
+  .cocktail {
     margin-left: 5px;
   }
 }
 
-@media screen and (max-width:768px){
-  .area-search{
+@media screen and (max-width:768px) {
+  .area-search {
     width: 100%;
   }
 
-  .search{
+  .search {
     background-color: #343a40;
   }
 }
 
 @media screen and (max-width:411px) {
-  .card-text{
+  .card-text {
     display: none;
   }
-  .btn{
+
+  .btn {
     width: 100%;
   }
+
   .cocktail {
     width: 45%;
   }
