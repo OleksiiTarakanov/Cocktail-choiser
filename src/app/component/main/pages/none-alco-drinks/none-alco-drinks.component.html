@@ -5,7 +5,7 @@
 
 <div class="content response">
   <span class="no-response" *ngIf="!cocktailList">No Data</span>
-  <div class="row">
+  <div class="row-cocktail">
     <div class="card cocktail" *ngFor="let cocktail of cocktailList | filterBySearch: search">
       <img src={{cocktail?.strDrinkThumb}} class="card-img-top" alt="..." routerLink={{cocktail?.idDrink}}>
       <div class="card-body">
