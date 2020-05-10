@@ -8,7 +8,7 @@
   justify-content: space-around;
   width: 100%;
   overflow-y: scroll;
-  background-image: url(https://s2.best-wallpaper.net/wallpaper/1920x1080/1807/Summer-smoothies-fruit-drinks-glass-cups_1920x1080.jpg);
+  background-image: url(https://cdn.hipwallpaper.com/i/56/67/TkajhZ.jpg);
 }
 
 .cocktail {
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: row;
   background-image: url(Summer-smoothies-fruit-drinks-glass-cups_1920x1080[1].png);
-  background-position-y: -100px;
+  // background-position-y: -100px;
   background-position-x: -300px;
 }
 
@@ -40,6 +40,18 @@
   }
 }
 
+@media screen and (max-width:993px) {
+  .cocktail {
+    flex-direction: column;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+  }
+  .close{
+    display: none;
+  }
+}
+
 @media screen and (max-width:768px) {
   .cocktail {
     width: 95%;
@@ -49,7 +61,7 @@
 @media screen and (max-width:411px) {
   .cocktail {
     flex-direction: column;
-    min-height: 500px;
+    min-height: 450px;
     display: flex;
     align-items: center;
 
@@ -63,7 +75,7 @@
 @media screen and (max-width:625px) {
   .cocktail {
     flex-direction: column;
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     align-items: center;
   }

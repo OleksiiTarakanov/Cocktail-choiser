@@ -41,6 +41,19 @@
   }
 }
 
+@media screen and (max-width:993px) {
+  .cocktail {
+    flex-direction: column;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .close{
+    display: none;
+  }
+}
+
 @media screen and (max-width:768px) {
   .cocktail {
     width: 95%;
@@ -50,7 +63,7 @@
 @media screen and (max-width:411px) {
   .cocktail {
     flex-direction: column;
-    min-height: 500px;
+    min-height: 450px;
     display: flex;
     align-items: center;
 
