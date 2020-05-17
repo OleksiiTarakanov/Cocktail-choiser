@@ -17,8 +17,8 @@
   </div>
 
   <div class="buttons" *ngIf="cocktailList?.length != 58">
-    <button class="btn btn-primary" (click)="getCocktailPage()" [disabled]="cocktailList?.length == 58">Show More
+    <button class="btn btn-primary" (click)="getCocktailPage()" *ngIf="cocktailList">Show More
       Cocktails</button>
-    <button class="btn btn-primary" (click)="getCocktails()">Show All</button>
+    <button class="btn btn-primary" (click)="getCocktails()" *ngIf="cocktailList">Show All</button>
   </div>
 </div>
