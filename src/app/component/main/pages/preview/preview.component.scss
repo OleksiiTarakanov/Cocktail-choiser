@@ -1,0 +1,63 @@
+.content {
+  height: calc(100vh - 226px);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cocktail {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alco {
+  background-image: url(https://wallpapermemory.com/uploads/473/wine-background-ultra-hd-4k-71027.jpg);
+  background-size: cover;
+  background-position-x: -100px;
+  transition: 0.5s;
+}
+
+.alco:hover {
+  // transform: scale(1.05);
+  width: 110%;
+}
+
+.none-alco {
+  background-image: url(https://wallpapercave.com/wp/wp2365432.jpg);
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.none-alco:hover {
+  // transform: scale(1.05);
+  width: 110%;
+}
+
+span {
+  font-size: 35px;
+  font-weight: bolder;
+  text-shadow: 0 3px 5px white;
+}
+
+@media screen and (max-width:700px) {
+  .content{
+    flex-direction: column;
+    .cocktail {
+      // height: 50%;
+      width: 100%;
+    }
+
+    span{
+      font-size: 26px;
+    }
+
+    .alco{
+      background-position-x: 0;
+    }
+  }
+}

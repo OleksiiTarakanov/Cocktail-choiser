@@ -17,11 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FilterBySearchPipe } from './shared/pipes/filter-by-seach/filter-by-search.pipe';
 import { AlcoDrinkComponent } from './component/main/pages/alco-drinks/alco-drink/alco-drink.component';
 import { NoneAlcoDrinkComponent } from './component/main/pages/none-alco-drinks/none-alco-drink/none-alco-drink.component';
-
-
-
-
-
+import { PreviewComponent } from './component/main/pages/preview/preview.component';
 
 
 
@@ -38,6 +34,7 @@ import { NoneAlcoDrinkComponent } from './component/main/pages/none-alco-drinks/
     FilterBySearchPipe,
     AlcoDrinkComponent,
     NoneAlcoDrinkComponent,
+    PreviewComponent,
   ],
   imports: [
     BrowserModule,
