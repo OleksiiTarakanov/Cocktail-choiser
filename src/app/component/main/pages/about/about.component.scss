@@ -1,9 +1,11 @@
 .content {
+  font-weight:  bold;
   height: calc(100vh - 226px);
   padding: 10px;
   background-image: url(https://gardenandgun.com/wp-content/uploads/2018/05/Anatomy-Sonker-Drink03180-1600x900.jpg);
   background-size: 120%;
   text-align: justify;
+  text-shadow: 0px 5px 5px wheat;
 }
 
 @media screen and (max-width:1024px) {
